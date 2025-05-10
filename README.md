@@ -104,7 +104,7 @@ To run the app locally, simply execute the following command using bash:
 
 **3.** Install dependencies
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 **4.** Create .env file with your DATABASE_URL
 
@@ -112,8 +112,8 @@ pip install -r requirements.txt
 
 **5.** Run migrations (Since the migration folder is already included in the repository, simply run:)
 
-flask db upgrade
+- flask db upgrade
 
 **6.** Run the app
 
-python app.py
+- python app.py
