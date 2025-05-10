@@ -14,16 +14,15 @@ def create_app():
     from routes.post_routes import post_bp
     app.register_blueprint(post_bp)
 
-    with app.app_context():
-        try:
-            from seed import run_seed
-            run_seed() 
-        except Exception as e:
-            print(f"Seed error (ignored): {e}")
-
     return app
 
 app = create_app()
 
 if __name__ == '__main__':
+    with app.app_context():
+        try:
+            from seed import run_seed
+            run_seed()
+        except Exception as e:
+            print(f"Seed error (ignored): {e}")
     app.run(debug=True)
