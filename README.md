@@ -94,8 +94,8 @@ To run the app locally, simply execute the following command using bash:
 
 **1.** Clone the repository
 
-- git clone **<repository-url>**
-- cd <project-folder>
+- git clone **repository-url**
+- cd **project-folder**
 
 **2.** Set up virtual environment
 
@@ -108,14 +108,15 @@ To run the app locally, simply execute the following command using bash:
 
 **4.** Create .env file with your DATABASE_URL
 
-- **.env format** - **DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>**
+- **.env format** - **DATABASE_URL=postgresql://username:password@host:port/database**
 
 **5.** Run migrations
 
-- First, manually create the database using SQL: `CREATE DATABASE copi;`
-- Then, run `flask db init` to initialize the migration folder.
-- Run `flask db migrate -m "Initial migration` to generate migration files based on your models.
-- Finally, run `flask db upgrade` to apply the migrations and create the tables in the database.
+- Manually create the database using SQL: `CREATE DATABASE copi;`
+- Run `flask db init` to initialize the migration folder.
+- Run `flask db migrate -m "Initial migration"` to generate migration files based on your models.
+- Run `flask db upgrade` to apply the migrations and create the tables in the database.
+- Run `python seed.py` to insert initial data.
 
 **6.** Run the app
 
