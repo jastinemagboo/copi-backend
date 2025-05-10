@@ -92,28 +92,28 @@ This file contains the routes for managing posts, and it is registered as a blue
 
 To run the app locally, simply execute the following command using bash:
 
-# 1. Clone the repository
+**1.** Clone the repository
 
 - git clone <repository-url>
 - cd <project-folder>
 
-# 2. Set up virtual environment
+**2.** Set up virtual environment
 
 - python -m venv venv
 - source venv/Scripts/activate
 
-# 3. Install dependencies
+**3.** Install dependencies
 
 pip install -r requirements.txt
 
-# 4. Create .env file with your DATABASE_URL
+**4.** Create .env file with your DATABASE_URL
 
-**.env format** - DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
+- **.env format** - DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
 
-# 5. Run migrations (Since the migration folder is already included in the repository, simply run:)
+**5.** Run migrations (Since the migration folder is already included in the repository, simply run:)
 
 flask db upgrade
 
-# 6. Run the app
+**6.** Run the app
 
 python app.py
