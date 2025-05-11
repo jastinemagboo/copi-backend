@@ -17,6 +17,3 @@ def run_seed():
         print("Seed data added.")
     else:
         print("Seed skipped — there's already existing data.")
-
-if __name__ == '__main__':
-    run_seed()
