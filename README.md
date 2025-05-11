@@ -116,7 +116,6 @@ To run the app locally, simply execute the following command using bash:
 - Run `flask db init` to initialize the migration folder.
 - Run `flask db migrate -m "Initial migration"` to generate migration files based on your models.
 - Run `flask db upgrade` to apply the migrations and create the tables in the database.
-- Run `python seed.py` to insert initial data.
 
 **6.** Run the app
 

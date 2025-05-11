@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from config import Config
 from extensions import db, migrate
@@ -20,9 +21,14 @@ def create_app():
 app = create_app()
 
 if __name__ == '__main__':
-    with app.app_context():  # Ensure the app context is available
-        try:
-            run_seed()  # Call run_seed to populate the seed data
-        except Exception as e:
-            print(f"Seed error (ignored): {e}")
+
+    # Only run seed if NOT reloading (i.e., not the auto-reloader)
+    if os.environ.get('WERKZEUG_RUN_MAIN') == 'true':
+        with app.app_context():
+            try:
+                from seed import run_seed
+                run_seed()
+            except Exception as e:
+                print(f"Seed error (ignored): {e}")
+                
     app.run(debug=True)
